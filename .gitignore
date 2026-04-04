@@ -1,6 +1,4 @@
-# This file is used to ignore files which are generated
-# ----------------------------------------------------------------------------
-
+# === 基础编译生成文件 ===
 *~
 *.autosave
 *.a
@@ -12,6 +10,13 @@
 *.rej
 *.so
 *.so.*
+*.slo
+*.lo
+*.la
+*.lai
+*.dylib
+*.dll
+*.exe
 *_pch.h.cpp
 *_resource.rc
 *.qm
@@ -27,6 +32,7 @@ Makefile*
 *.prl
 *.app
 moc_*.cpp
+moc_*.h
 ui_*.h
 qrc_*.cpp
 Thumbs.db
@@ -35,19 +41,37 @@ Thumbs.db
 /.qmake.cache
 /.qmake.stash
 **/.qmlls.ini
+object_script.*.Release
+object_script.*.Debug
+*_plugin_import.cpp
+*.qmlc
+*.jsc
+*_qmlcache.qrc
+target_wrapper.*
+compile_commands.json
 
-# qtcreator generated files
+# === Qt Creator 用户配置文件 (关键) ===
 *.pro.user*
 *.qbs.user*
 CMakeLists.txt.user*
+*.qmlproject.user*
+*creator.user*
 
-# xemacs temporary files
+# === 编译输出目录 (重点) ===
+/build*/
+*build-*/
+.moc/
+.obj/
+.pch/
+.rcc/
+.uic/
+/.qtcreator/
+
+# === 编辑器临时文件 ===
 *.flc
-
-# Vim temporary files
 .*.swp
 
-# Visual Studio generated files
+# === Visual Studio 相关 ===
 *.ib_pdb_index
 *.idb
 *.ilk
@@ -62,23 +86,5 @@ CMakeLists.txt.user*
 *.vcxproj
 *vcxproj.*
 
-# MinGW generated files
-*.Debug
-*.Release
-
-# Python byte code
+# === 其他 ===
 *.pyc
-
-# Binaries
-# --------
-*.dll
-*.exe
-
-# Directories with generated files
-.moc/
-.obj/
-.pch/
-.rcc/
-.uic/
-/build*/
-/.qtcreator/
